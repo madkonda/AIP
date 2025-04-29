@@ -17,19 +17,18 @@ sudo apt install ffmpeg
 
 ## Frame Extraction from Video
 
-- Create a directory to store extracted frames:
+- Create a directory inside sam2/notebooks/videos to store extracted frames:
   ```bash
-  mkdir -p videos
+  mkdir -p 18
   ```
 - Extract every 10th frame from the input video:
   ```bash
-  ffmpeg -i input_video.mp4 -vf "select=not(mod(n\,10))" -vsync vfr -q:v 2 videos/%06d.jpg
+  ffmpeg -i input_video.mp4 -vf "select=not(mod(n\,10))" -vsync vfr -q:v 2 18/%06d.jpg
   ```
 
 ## Running the Code
 
-- Download the `mouse.ipynb` notebook from this repository.
-- Make sure the extracted `videos` folder and the `mouse.ipynb` notebook are in the same directory.
+- Download the `mouse.ipynb` notebook from this repository into sam2/notebooks.
 - Open and run the `mouse.ipynb` notebook to proceed with the analysis.
 
 ## Pose Estimation
